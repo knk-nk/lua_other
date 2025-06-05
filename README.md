@@ -3,6 +3,7 @@
 1. Скачиваем Lua [по данной ссылке](https://sourceforge.net/projects/luabinaries/files/5.4.2/Tools%20Executables/lua-5.4.2_Win64_bin.zip/download);
 2. Распаковываем архив в любой директории;
 3. Указываем `lua54.exe` как программу для открытия `.lua` файлов.
+
 https://github.com/user-attachments/assets/fbd4c5b9-98cc-47ff-8630-61d57a22dcb7
 
 # Content
