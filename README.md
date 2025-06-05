@@ -1,12 +1,12 @@
-## 
-# Как "установить" Lua и открыть .lua файл
+# Установка Lua
 1. Скачиваем Lua [по данной ссылке](https://sourceforge.net/projects/luabinaries/files/5.4.2/Tools%20Executables/lua-5.4.2_Win64_bin.zip/download);
 2. Распаковываем архив в любой директории;
 3. Указываем `lua54.exe` как программу для открытия `.lua` файлов.
-
+<br>
 https://github.com/user-attachments/assets/fbd4c5b9-98cc-47ff-8630-61d57a22dcb7
+<br>
 
-# Content
+# Список файлов
 cdnscan.lua
 > Анализатор сайта на ссылки на домены популярных API/CDN (Google, Amazon, Facebook, Twitter и т.д).
 
