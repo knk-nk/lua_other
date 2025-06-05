@@ -549,19 +549,19 @@ local function generatePolicies(_path)
 		cookies_popup = [[
 <!-- Cookies Popup -->
 <style>
-:root { --accentColor: #c22; }
-.__cookies::before { content: "Этот сайт использует файлы cookie для хранения персональных данных. Продолжая использовать сайт, Вы даете согласие на работу с этими файлами. Посмотреть согласие вы можете по данной ссылке: <a href="{11}">{11}</a>."; }
+:root { --accentColor: #E32A2C; }
 .__cookies > button::before { content: "Принять"; }
-.__cookies > * { margin: auto; }
 .__cookies { font-family: Verdana; z-index: 99; display: flex; flex-wrap: wrap; position: fixed; bottom: 5vmin; left: 5vmin; padding: 1.5rem 2rem; width: 60vmin; background: #222; color: #bbb; border-radius: 1.5rem; box-shadow: 0 0 2rem #0007; text-shadow: 2px 2px 5px #000; }
-.__cookies > button { background: var(--accentColor); color: #fff; margin-top: 1.5rem; padding: 0.5rem 3rem; border: none; border-radius: 0.5rem; cursor: pointer; box-shadow: 0.2rem 0.2rem 1rem #0007; box-sizing: border-box; transition: 0.2s; }
+.__cookies > button { background: var(--accentColor); color: #fff; margin: 1.5rem auto auto auto; padding: 0.5rem 3rem; border: none; border-radius: 0.5rem; cursor: pointer; box-shadow: 0.2rem 0.2rem 1rem #0007; box-sizing: border-box; transition: 0.2s; }
 .__cookies > button:hover { filter: brightness(0.9); transform: scale(0.95); }
+.__cookies a { color: var(--accentColor) !important; font-weight: bold; }
 </style>
 <script async defer>
 window.addEventListener("load", ()=>{
 	if (!window.localStorage.getItem('cookies_accepted')) {
-		document.body.insertAdjacentHTML('beforeend',
-		"<div class='__cookies'><button onclick='window.localStorage.setItem(\"cookies_accepted\", 1); this.parentNode.remove()'></button></div>");
+		document.body.insertAdjacentHTML('beforeend', "<div class='__cookies'><p>"
+		+"Этот сайт использует файлы cookie для хранения персональных данных. Продолжая использовать сайт, Вы даете согласие на работу с этими файлами. Посмотреть согласие вы можете <a href='{11}'>по данной ссылке</a>.</p>"
+		+"<button onclick='window.localStorage.setItem(\"cookies_accepted\", 1); this.parentNode.remove()'></button></div>");
 	}
 });
 </script>]]
