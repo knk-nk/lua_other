@@ -17,7 +17,7 @@ function checkredirs(url)
 	}
 	local page = curl(url, nil, 1)
 	local http = curl('http://'..url:gsub('http[s]?://', ''), nil, 1)
-	if http then print 'HTTP is Available. This is a problem.' end
+	if http == page then print 'HTTP is Available. This is a problem.' end
 	for i,v in ipairs(pref) do
 		local duplicate = curl(url..v, nil, 1)
 		if duplicate == page then
