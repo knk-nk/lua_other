@@ -48,7 +48,7 @@ function rmdir(path)
 end
 
 -- Unix command: curl
-function curl(url, _form)
+function curl(url, _form, _noredir)
 	local _curl = _ENV.bin.curl or 'curl'
 	local form, formdata = {}, ' '
 	if _form then
@@ -58,7 +58,10 @@ function curl(url, _form)
 		formdata = 'd "'..table.concat(form, '&')..'" '
 	end
 
-	local p = io.popen(_curl..' -sL'..formdata..url)
+	local redir = 'L'
+	if _noredir then redir = '' end
+
+	local p = io.popen(_curl..' -s'..redir..formdata..url)
 	local content = p:read('*a')
 	p:close()
 	return content
